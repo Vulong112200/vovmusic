@@ -1,0 +1,23 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+        "node": "v14.18.1"
+    },
+    "author": "VOVMusic",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^8.1.1",
+        "mongoose": "^8.1.1",
+        "start": "^8.1.1"
+    },
+    "devDependencies": {
+        "nodemon": "^8.1.1"
+    }
+}
