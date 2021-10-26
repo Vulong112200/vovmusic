@@ -10,7 +10,7 @@
     "engines": {
         "node": "v12.18.4"
     },
-    "author": "3Can5",
+    "author": "vovmusic",
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1",
