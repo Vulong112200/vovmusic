@@ -8,16 +8,15 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "engines": {
-        "node": "v14.18.1"
+        "node": "v12.18.4"
     },
-    "author": "VOVMusic",
+    "author": "3Can5",
     "license": "ISC",
     "dependencies": {
-        "express": "^8.1.1",
-        "mongoose": "^8.1.1",
-        "start": "^8.1.1"
+        "express": "^4.17.1",
+        "mongoose": "^5.12.8"
     },
     "devDependencies": {
-        "nodemon": "^8.1.1"
+        "nodemon": "^2.0.7"
     }
 }
