@@ -53,7 +53,7 @@ async function userInfo(req, res) {
 } // ok
 async function findUser(req, res) {
     try {
-        let user = await UserModel.find({ Username: req.body.Username, Password: req.body.Password });
+        let user = await UserModel.find({ email: req.body.email, password: req.body.password });
         if (user.length != 0) {
             res.status(200).json({
                 status: "found",
