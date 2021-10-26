@@ -9,7 +9,7 @@ Router.get("/", controller.allUser);
 
 Router.get("/:IDUser", controller.userInfo);
 
-Router.post("/find", controller.findUser); // find by username and pass word
+Router.post("/find", controller.findUser); // find by email and password
 
 Router.post("/:IDUser", controller.updateInfo);
 

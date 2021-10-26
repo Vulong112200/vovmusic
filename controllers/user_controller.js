@@ -139,7 +139,7 @@ async function allUser(req, res) {
         let dsuser = await UserModel.find();
 
         res.status(200).json({
-            status: "found rồi thì mày ở đâu T_T",
+            status: "found rồi",
             dsuser
         })
 
