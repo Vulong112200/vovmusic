@@ -13,8 +13,8 @@ app.use(express.json());
 
 Router(app);
 
-let port = process.env.PORT || 3000;
 
-app.listen(3000, function() {
+
+app.listen(process.env.PORT, function() {
     console.log("Listen at port 3000");
 })
