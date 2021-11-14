@@ -136,11 +136,11 @@ async function updatePass(req, res) {
 } //ok
 async function allUser(req, res) {
     try {
-        let dsuser = await UserModel.find();
+        let dsusernhieutrai = await UserModel.find();
 
         res.status(200).json({
             status: "found rồi",
-            dsuser
+            dsusernhieutrai
         })
 
         res.status(500).json({
