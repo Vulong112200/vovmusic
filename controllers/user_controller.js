@@ -136,17 +136,11 @@ async function updatePass(req, res) {
 } //ok
 async function allUser(req, res) {
     try {
-        let dsusernhieutrai = await UserModel.find();
-
-        res.status(200).json({
-            status: "found rồi",
-            dsusernhieutrai
-        })
-
-        res.status(500).json({
-            status: "fail to load",
-            message: "sai ở đâu rồi T_T"
-        })
+        await UserModel.find({}, function(ERROR, user) {
+            res.json(
+                user
+            )
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json({
