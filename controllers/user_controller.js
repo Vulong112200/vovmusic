@@ -136,7 +136,7 @@ async function updatePass(req, res) {
 } //ok
 async function allUser(req, res) {
     try {
-        let dsusernhieutrai = await UserModel.find();
+        let dsusernhieutrai = await schema.find();
 
         res.status(200).json({
             status: "found rồi",

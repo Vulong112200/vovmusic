@@ -10,4 +10,4 @@ const schema = mongoose.Schema({ //tao ra mot định hình dữ liệu cho user
     version: false,
     collection: 'user'
 })
-const UserModel = mongoose.model("user", schema); //tạo ra đối tượng ứng với cách định hình ở trên
+module.exports = mongoose.model("user", schema); //tạo ra đối tượng ứng với cách định hình ở trên
