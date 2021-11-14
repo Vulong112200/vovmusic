@@ -141,6 +141,10 @@ async function allUser(req, res) {
                 user
             )
         });
+        res.status(500).json({
+            status: "fail to load",
+            message: "sai ở đâu rồi T_T"
+        })
     } catch (err) {
         console.log(err);
         res.status(500).json({
