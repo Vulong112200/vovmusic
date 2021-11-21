@@ -136,7 +136,7 @@ async function updatePass(req, res) {
 } //ok
 async function allUser(req, res) {
     try {
-        let dsuser = await SongModel.find();
+        let dsuser = await UserModel.find();
 
         res.status(200).json({
             status: "found rồi thì mày ở đâu T_T",

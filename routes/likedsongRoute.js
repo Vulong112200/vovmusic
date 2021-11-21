@@ -1,6 +1,6 @@
 const Router = require("express").Router();
 
-const controller = require("../controllers/song_controller");
+const controller = require("../controllers/likedsong_controller");
 
 
 Router.post("/", controller.addSong);

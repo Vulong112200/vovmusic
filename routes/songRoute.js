@@ -5,7 +5,7 @@ const controller = require("../controllers/song_controller");
 
 Router.post("/", controller.addSong);
 
-Router.get("/", controller.allUser);
+Router.get("/", controller.allSong);
 
 Router.get("/:IDUser", controller.songInfo);
 
