@@ -9,7 +9,7 @@ Router.get("/", controller.allUser);
 
 Router.get("/:IDUser", controller.userInfo);
 
-Router.post("/find", controller.findUser); 
+Router.post("/find", controller.findUser);
 
 Router.post("/:IDUser", controller.updateInfo);
 

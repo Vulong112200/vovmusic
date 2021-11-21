@@ -2,7 +2,7 @@ const UserModel = require('../models/user');
 async function addUser(req, res) {
     try {
         let user = new UserModel(req.body);
-        if (user.Username.length == 0 || user.HoTen.length == 0 || user.NgaySinh.length == 0 || user.Password.length == 0 || user.Mail.length == 0 || user.PhanQuyen.length == 0) {
+        if (user.Username.length == 0 || user.HoTen.length == 0 || user.Password.length == 0 || user.Mail.length == 0 || user.PhanQuyen.length == 0) {
             console.log("hi");
             res.status(500).json({
                 status: "fail",
