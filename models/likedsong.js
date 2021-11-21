@@ -6,5 +6,5 @@ const schema = mongoose.Schema({ //tao ra mot định hình dữ liệu cho user
     version: false,
     collection: 'liked-songs'
 })
-const SongModel = mongoose.model("liked-songs", schema); //tạo ra đối tượng ứng với cách định hình ở trên
-module.exports = SongModel;
+const LikedSongModel = mongoose.model("liked-songs", schema); //tạo ra đối tượng ứng với cách định hình ở trên
+module.exports = LikedSongModel;
