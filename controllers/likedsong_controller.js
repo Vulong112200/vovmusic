@@ -134,7 +134,7 @@ async function updatePass(req, res) {
         })
     }
 } //ok
-async function allUser(req, res) {
+async function allSong(req, res) {
     try {
         let likedsong = await LikedSongModel.find();
 
@@ -161,5 +161,5 @@ module.exports = {
     findUser,
     updateInfo,
     updatePass,
-    allUser
+    allSong
 }
