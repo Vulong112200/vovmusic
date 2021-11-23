@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://PhiVu:Admin1234@cluster0.tthxw.mongodb.net/vovmu
 app.use(express.json());
 
 Router(app);
-
+//
 app.listen(process.env.PORT, function() {
     console.log("Listen at port");
 })

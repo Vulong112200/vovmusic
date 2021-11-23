@@ -1,5 +1,5 @@
 const LikedSongModel = require('../models/likedsong');
-async function addUser(req, res) {
+async function addlikedSong(req, res) {
     try {
         let user = new SongModel(req.body);
         if (user.Username.length == 0 || user.HoTen.length == 0 || user.NgaySinh.length == 0 || user.Password.length == 0 || user.Mail.length == 0 || user.PhanQuyen.length == 0) {
@@ -134,12 +134,11 @@ async function updatePass(req, res) {
         })
     }
 } //ok
-async function allSong(req, res) {
+async function alllikedSong(req, res) {
     try {
         let likedsong = await LikedSongModel.find();
 
         res.status(200).json({
-            status: "found rồi thì mày ở đâu T_T",
             likedsong
         })
 
@@ -157,9 +156,9 @@ async function allSong(req, res) {
 }
 module.exports = {
     userInfo,
-    addUser,
+    addlikedSong,
     findUser,
     updateInfo,
     updatePass,
-    allSong
+    alllikedSong
 }

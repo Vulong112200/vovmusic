@@ -1,12 +1,10 @@
 const userRoute = require("./userRoute");
-const likedsongRoute = require("./likesongRoute");
+const liked_songRoute = require("./liked_songRoute");
 
 function route(app) {
 
     app.use("/user", userRoute);
-    app.use("/likedsong", likedsongRoute);
-
-
+    app.use("/liked_song", liked_songRoute);
 }
 
 module.exports = route;
