@@ -136,12 +136,11 @@ async function updatePass(req, res) {
 } //ok
 async function alllikedSong(req, res) {
     try {
-        let likedsong = await LikedSongModel.find();
-
-        res.status(200).json({
-            likedsong
-        })
-
+        await LikedSongModel.find({}, function(ERROR, likedsong) {
+            res.json(
+                likedsong
+            )
+        });
         res.status(500).json({
             status: "fail to load",
             message: "sai ở đâu rồi T_T"
