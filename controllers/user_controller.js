@@ -2,16 +2,16 @@ const UserModel = require('../models/user');
 async function addUser(req, res) {
     try {
         let user = new UserModel(req.body);
-        if (user.HoTen.length == 0 || user.Password.length == 0 || user.Mail.length == 0 || user.PhanQuyen.length == 0) {
+        if (user.name.length == 0 || user.password.length == 0 || user.email.length == 0) {
             console.log("hi");
             res.status(500).json({
                 status: "fail",
                 message: "Something is null"
             })
         } else {
-            let listUser = await UserModel.find({ Username: user.Username });
+            let listUser = await UserModel.find({ email: user.email });
             if (listUser.length == 0) {
-                console.log("Username khong trung");
+                console.log("Email khong trung");
                 await user.save();
                 res.status(201).json({
                     status: "success"
@@ -105,16 +105,15 @@ async function updateInfo(req, res) {
 } //ok
 async function updatePass(req, res) {
     try {
-        let newpass = req.body.Password;
+        let newpass = req.body.password;
         console.log(" pass moi: " + newpass);
-        console.log(req.body.OldPass)
-        let user = await UserModel.find({ _id: req.params.IDUser, Password: req.body.OldPass });
+        let user = await UserModel.findOne({ id: req.params.IDUser });
         console.log(user.length);
         if (user.length != 0) {
             console.log("hihi");
-            user[0].Password = newpass;
-            console.log(user[0]);
-            await user[0].save();
+            user.password = newpass;
+            console.log(user);
+            await user.save();
             res.status(201).json({
                 status: "saved",
                 message: "password changed"
